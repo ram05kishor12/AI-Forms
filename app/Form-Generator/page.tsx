@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dialog";
 import { Textarea } from "@/components/ui/textarea";
 import { link } from "fs";
-
+import { signOut } from "next-auth/react";
 export default function Form() {
     const [open, setOpen] = useState(false);
     const onformCreate = () => {
@@ -39,6 +39,7 @@ export default function Form() {
                     </DialogFooter>
                 </DialogContent>
             </Dialog>
+            <Button onClick={() => signOut()}>Sign Out</Button>
         </div>
     )
 }

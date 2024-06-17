@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeProvider } from "@/components/ui/themeprovider";
 import Image from "next/image";
 import { ThemeToggle } from "./components/themetoogle";
-import Form from "./Form-Generator";
+import Form from "./Form-Generator/page";
 
 
 export default function Home() {
