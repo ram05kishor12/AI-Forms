@@ -16,14 +16,20 @@ export const authOptions = {
       }),
     ],
     pages: {
+      error: '/auth/error',
     },
-    callbacks: {
-       session: ({ session, token, user }) => {
-       console.log("session", session)
+    
+    async session({ session, token, user }) {
+      console.log("session", session)
     },
-  },
+    async signIn({ user, account, profile, email, credentials }) {
+      console.log("signIn", user);
+      return true;
+    },
+  };
 
-  }
+
+  
  
   const handler = NextAuth(authOptions);
 
